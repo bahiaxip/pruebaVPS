@@ -3,7 +3,7 @@
 var express = require("express");
 
 var bodyParser = require("body-parser");
-
+var path=require("path");
 var app = express();
 
 //cargar rutas
@@ -26,6 +26,7 @@ app.use((req,res,next) => {
 });
 
 //rutas base
+app.use("/", express.static("client",{redirect:false}));
 app.use("/api",user_routes);
 app.use("/api",animal_routes);
 //app.use("/",user_routes);
@@ -35,5 +36,8 @@ app.get("/probando", (req,res) => {
 	res.status(200).send({message: "Este es el método probando"});
 });
 */
+app.get("*",function(req,res,next){
+	res.sendFile(path.resolve("client/index.html");
+}
 
 module.exports = app;

@@ -1,0 +1,140 @@
+
+body{
+
+}
+.pointer{
+  cursor:pointer;
+}
+.navigation.col-lg-12{
+  margin-top:10px;
+}
+
+.jumbotron{
+  padding:40px;
+  border-radius: 5px;
+  box-shadow: #ccc 2px 5px 1px ;
+}
+.jumbotron a{
+  margin:auto 2px;
+}
+
+.navbar-nav .active{
+  border-bottom: orange 3px solid ;
+}
+/* este estilo lo incluimos por si el efecto hover modifica el tamaño de la letra*/
+.navbar-default .navbar-nav>li>a{
+  transition: all 0.3s;
+  border-bottom:transparent 3px solid;
+
+}
+.navbar-default .navbar-nav>li>a:hover{
+  transition: all 0.3s;
+  border-bottom:orange 3px solid;
+
+}
+
+.image_for_edit img{
+  width:60px;
+}
+
+.avatar{
+  width:35px;
+  height:35px;
+  border-radius:700px;
+  overflow:hidden;
+  margin-top:8px;
+  margin-right: 5px;
+}
+.avatar img{
+  width:100%;
+}
+
+.animal-image-mask,
+.keeper-image-mask{
+  width:100%;
+  height:200px;
+  overflow: hidden;
+}
+
+.animal-image-mask img,
+.keeper-image-mask img{
+  max-height:400px;
+}
+
+.boton_transiciones{
+  padding:10px;
+  background:red;
+  color:white;
+  border-radius:20px;
+  border:blur 1px solid;
+  transition:border 1s, border-radius 0.7s, background 2s;
+  display:block;
+  width:100px;
+}
+
+.boton_transiciones:hover{
+  text-decoration:none;
+  color:white;
+  cursor:pointer;
+  border-radius:2px;
+  background:#ccc;
+  border:red 1px solid;
+}
+
+.caja_animada{
+  background: green;
+  border:black 5px solid;
+  width:200px;
+  height:200px;
+  margin-top:15px;
+  animation-name: rotacion;
+  /*animation-name: deslizamiento;*/
+  animation-duration: 10s;
+  /*animation-iteration-count:infinite;*/
+}
+
+@keyframes rotacion{
+  0% {
+    margin-left:0px;
+    transform: rotate(0deg);
+  }
+  50% {
+    margin-left:600px;
+    transform: rotate(360deg);
+  }
+  100% {
+    margin-left:0px;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes deslizamiento{
+  0% {
+    margin-left:0px;
+    background: green;
+  }
+  25% {
+    margin-left:400px;
+    background:red;
+    border-radius:1000px;
+  }
+  75% {
+    margin-left:0px;
+    background:yellow;
+    border-radius:0px;
+  }
+  100% {
+    background:green;
+  }
+}
+
+@keyframes deslizamiento1{
+  from {
+    margin-left:0px;
+    background: green;
+  }
+  to {
+    margin-left:400px;
+    background:red;
+  }
+}
