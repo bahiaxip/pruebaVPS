@@ -37,7 +37,7 @@ app.get("/probando", (req,res) => {
 });
 */
 app.get("*",function(req,res,next){
-	res.sendFile(path.resolve("client/index.html");
+	res.sendFile(path.resolve("client/index.html"));
 }
 
 module.exports = app;
